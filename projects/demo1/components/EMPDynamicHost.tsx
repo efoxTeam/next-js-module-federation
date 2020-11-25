@@ -108,3 +108,11 @@ export const EMPComponent: React.FC<RemoteHostProps> = ({host, widgetProps}: Rem
     </React.Suspense>
   )
 }
+export const EMPImportComponent = (props: any) => {
+  const Component = React.lazy(() => props.mod())
+  return (
+    <React.Suspense fallback="Loading Button">
+      <Component {...props} />
+    </React.Suspense>
+  )
+}
