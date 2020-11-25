@@ -1,0 +1,7 @@
+{
+  "scripts": {
+    "dev": "lerna run --scope @emp/* --parallel dev",
+    "build": "lerna run --scope @emp/* --parallel build",
+    "start": "lerna run --scope @emp/* --parallel start"
+  }
+}

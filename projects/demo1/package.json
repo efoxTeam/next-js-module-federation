@@ -1,0 +1,25 @@
+{
+  "name": "@emp/demo1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@efox/emp-tsconfig": "^1.1.3",
+    "@types/react": "^17.0.0",
+    "typescript": "^4.1.2",
+    "webpack": "^5.6.0"
+  },
+  "dependencies": {
+    "next": "^10.0.2",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "scripts": {
+    "dev": "next -p 3001",
+    "build": "next build",
+    "start": "next start -p 3001"
+  },
+  "resolutions": {
+    "webpack": "^5.6.0"
+  }
+}
