@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "emp dev",
+    "dev": "emp dev --open=false",
     "build": "emp build",
     "start": "emp serve"
   },
