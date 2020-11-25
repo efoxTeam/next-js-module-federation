@@ -1,14 +1,14 @@
-import {lazy, Suspense} from 'react'
+import {ComponentType, lazy, Suspense} from 'react'
 type RemoteComponentType = {
-  scope: string
-  module: string
+  moduleImport<T>(): Promise<{default: ComponentType<T>}>
   props?: any
 }
-export const RemoteComponent = ({scope, module, ...props}: RemoteComponentType) => {
+export const RemoteComponent = ({moduleImport, props}: RemoteComponentType) => {
   if (typeof window === 'undefined') {
     return null
   }
-  const Component = lazy(() => import(`${scope}/${module}`))
+  console.log('window', !!window)
+  const Component = lazy(() => moduleImport())
 
   return (
     <Suspense fallback={<>loading...</>}>

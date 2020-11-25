@@ -2,6 +2,9 @@ module.exports = {
   webpack: (config, options) => {
     const {webpack} = options
     const projectName = 'demo1'
+    // config.experiments.set('topLevelAwait', true)
+    config.experiments = {...config.experiments, ...{topLevelAwait: true}}
+    // console.log(config)
     config.plugins.push(
       new webpack.container.ModuleFederationPlugin({
         name: projectName,
