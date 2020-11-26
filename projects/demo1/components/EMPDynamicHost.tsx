@@ -1,12 +1,5 @@
 import React from 'react'
-interface HostConfig {
-  name: string
-  module: string
-}
-interface RemoteHostProps {
-  host: HostConfig
-  widgetProps?: any
-}
+
 interface tipsI {
   noHost: string | React.ReactNode
   failed: string | React.ReactNode
@@ -100,16 +93,29 @@ export const EMPHostsProvider: React.FC<RemoteHostsPrividerProps> = ({
   }
   return children
 }
-export const EMPComponent: React.FC<RemoteHostProps> = ({host, widgetProps}: RemoteHostProps) => {
+//
+interface HostConfig {
+  name: string
+  module: string
+}
+interface RemoteHostProps<T> {
+  host: HostConfig
+  props?: T
+}
+export function EMPFactory<T>({host, props}: RemoteHostProps<T>): JSX.Element {
   const Component = React.lazy(loadComponent(host.name, host.module))
   return (
     <React.Suspense fallback="Loading Button">
-      <Component {...widgetProps} />
+      <Component {...props} />
     </React.Suspense>
   )
 }
-export const EMPImportComponent = (props: any) => {
-  const Component = React.lazy(() => props.mod())
+interface PropsImportI<T> {
+  mod: any
+  props?: T
+}
+export function EMPImport<T>({mod, props}: PropsImportI<T>): any {
+  const Component = React.lazy(() => mod())
   return (
     <React.Suspense fallback="Loading Button">
       <Component {...props} />

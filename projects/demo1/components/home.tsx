@@ -1,12 +1,14 @@
-import {EMPComponent, EMPImportComponent, EMPHostsProvider} from './EMPDynamicHost'
-const Home = () => (
+import {EMPFactory, EMPImport, EMPHostsProvider} from './EMPDynamicHost'
+type RemoteCompType = {title: string}
+const Home = (): JSX.Element => (
   <EMPHostsProvider hosts={['http://localhost:8000/emp.js']}>
     <h1>Demo 1 Components</h1>
     <div>
-      <EMPComponent host={{name: 'demo2', module: './home'}} widgetProps={{title: 'DateTime:' + Date.now()}} />
-      <EMPComponent host={{name: 'demo2', module: './home'}} widgetProps={{title: Date.now()}} />
-      <EMPComponent host={{name: 'demo2', module: './home'}} widgetProps={{title: Date.now()}} />
-      <EMPImportComponent mod={() => import('demo2/home')} title={'Import Mod'} />
+      <EMPFactory<RemoteCompType>
+        host={{name: 'demo2', module: './home'}}
+        props={{title: 'use EMPFactory Component!'}}
+      />
+      <EMPImport<RemoteCompType> mod={() => import('@d2/home')} props={{title: 'use EmpImport Component!'}} />
     </div>
   </EMPHostsProvider>
 )
