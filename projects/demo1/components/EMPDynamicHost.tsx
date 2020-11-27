@@ -111,10 +111,10 @@ export function EMPFactory<T>({host, props}: RemoteHostProps<T>): JSX.Element {
   )
 }
 interface PropsImportI<T> {
-  mod: any
+  mod: () => Promise<{default: React.ComponentType<any>}>
   props?: T
 }
-export function EMPImport<T>({mod, props}: PropsImportI<T>): any {
+export function EMPImport<T>({mod, props}: PropsImportI<T>): JSX.Element {
   const Component = React.lazy(() => mod())
   return (
     <React.Suspense fallback="Loading Button">
