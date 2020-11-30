@@ -17,7 +17,7 @@ module.exports = ({config, env}) => {
         library: {type: 'var', name: projectName},
         filename: 'emp.js',
         remotes: {
-          demo2: 'demo2',
+          // demo2: 'demo2',
         },
         exposes: {
           './home': 'src/components/App',

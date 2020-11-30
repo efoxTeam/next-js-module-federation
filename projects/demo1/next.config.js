@@ -11,6 +11,7 @@ module.exports = {
         library: {type: 'var', name: projectName},
         filename: 'static/runtime/emp.js',
         remotes: {
+          // '@d2': 'demo2@http://localhost:8000/emp.js',
           '@d2': 'demo2',
         },
         exposes: {
