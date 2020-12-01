@@ -1,5 +1,5 @@
 {
-  "name": "@emp/demo2",
+  "name": "@emp/static-host",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -12,7 +12,7 @@
     "@efox/emp-cli": "^1.5.4"
   },
   "dependencies": {
-    "@efox/emp-cli": "^1.5.4",
+    "@efox/emp-cli": "^1.6.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
   }

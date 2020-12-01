@@ -1,5 +1,5 @@
 {
-  "name": "@emp/demo1",
+  "name": "@emp/next-host",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -12,13 +12,12 @@
   "dependencies": {
     "next": "^10.0.2",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "webpack": "^5.9.0"
+    "react-dom": "^17.0.1"
   },
   "scripts": {
-    "dev": "next -p 3001",
+    "dev": "next -p 3002",
     "build": "next build",
-    "start": "next start -p 3001"
+    "start": "next start -p 3002"
   },
   "resolutions": {
     "webpack": "^5.9.0"
