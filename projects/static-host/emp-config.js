@@ -11,7 +11,7 @@ module.exports = ({config, env}) => {
       ...args[0],
       ...{
         name: 'staticHost',
-        library: {type: 'var', name: 'staticHost'},
+        // library: {type: 'var', name: 'staticHost'},
         filename: 'emp.js',
         exposes: {
           './home': 'src/components/App',
