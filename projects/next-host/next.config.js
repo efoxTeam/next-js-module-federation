@@ -18,8 +18,8 @@ module.exports = {
     // if (!options.isServer) {
     //   config.output.library = 'nextHost'
     // }
-    // console.log(JSON.stringify(config, null, 2))
-    console.log(config)
+    console.log(JSON.stringify(config, null, 2))
+    // console.log(config)
     return config
   },
 }
