@@ -14,5 +14,13 @@
   ],
   "devDependencies": {
     "@efox/eslint-config-react-prittier-ts": "^1.2.3"
+  },
+  "scripts": {
+    "dev": "lerna run --scope={app1,static-host} --parallel dev",
+    "build": "lerna run --scope={app1,static-host} --parallel build",
+    "start": "lerna run --scope={app1,static-host} --parallel start",
+    "dev:all": "lerna run --scope={app1,next-host,static-host} --parallel dev",
+    "build:all": "lerna run --scope={app1,next-host,static-host} --parallel build",
+    "start:all": "lerna run --scope={app1,next-host,static-host} --parallel start"
   }
 }

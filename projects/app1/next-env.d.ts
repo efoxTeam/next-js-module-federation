@@ -10,7 +10,7 @@ declare namespace global {
 
 declare let window: Window
 
-declare module '@d2/home' {
+declare module '@sh/home' {
   const App: ({title}: {title: string}) => JSX.Element
   export default App
 }

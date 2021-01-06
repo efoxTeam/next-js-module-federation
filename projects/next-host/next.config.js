@@ -7,7 +7,7 @@ module.exports = {
     config.plugins.push(
       new webpack.container.ModuleFederationPlugin({
         name: 'nextHost',
-        // library: {type: config.output.libraryTarget, name: 'nextHost'},
+        library: {type: config.output.libraryTarget, name: 'nextHost'},
         filename: 'static/runtime/emp.js',
         remotes: {},
         exposes: {
