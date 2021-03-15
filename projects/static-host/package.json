@@ -9,8 +9,7 @@
     "start": "emp serve"
   },
   "devDependencies": {
-    "@efox/emp-cli": "1.6.1",
-    "webpack": "^5.11.1"
+    "@efox/emp-cli": "^1.7.13"
   },
   "dependencies": {
     "react": "^17.0.1",

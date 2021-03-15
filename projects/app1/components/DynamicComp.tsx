@@ -1,4 +1,4 @@
-import {EMPFactory, EMPHostsProvider} from './EMPDynamicHost'
+import {EMPFactory, EMPHostsProvider} from './empComponent/RemoteComp'
 const DynamicComp = (): JSX.Element => (
   <EMPHostsProvider
     hosts={[
