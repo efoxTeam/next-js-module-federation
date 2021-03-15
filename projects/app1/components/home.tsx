@@ -1,8 +1,6 @@
-import System from './empComponent'
 import React from 'react'
 import dynamic from 'next/dynamic'
-import fetchMF from 'components/empComponent/helper/fetchMf'
-import {loadComponent} from 'components/empComponent/helper/clientDynamic'
+import loadComponent from 'components/empComponent/helper/loadComponent'
 interface SystemLoadComponentI {
   system: {
     url: string
@@ -12,20 +10,11 @@ interface SystemLoadComponentI {
   }
 }
 const DynamicComponent = dynamic<SystemLoadComponentI>(
-  () =>
-    new Promise(r => {
-      const system = {
-        url: 'http://localhost:3003/emp.js',
-        scope: 'staticHost',
-        module: './home',
-      }
-      if (typeof window === 'undefined')
-        fetchMF(system).then(d => {
-          r(d.default)
-        })
-      else loadComponent(system)().then(d => r(d.default))
-    }),
-  // {ssr: true},
+  loadComponent({
+    url: 'http://localhost:3003/emp.js',
+    scope: 'staticHost',
+    module: './home',
+  }),
 )
 const Home: any = () => {
   return (

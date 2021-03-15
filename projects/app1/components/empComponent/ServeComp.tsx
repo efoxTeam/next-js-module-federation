@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react'
-import fetchMF from './helper/fetchMf'
+import fetchMF from './helper/serverLoadComponent'
 
 export default function System(props: any) {
   const [view, setView]: any = useState([null])
