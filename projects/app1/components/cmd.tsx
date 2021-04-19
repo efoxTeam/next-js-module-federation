@@ -1,6 +1,6 @@
 import {GetStaticProps, GetStaticPaths, GetServerSideProps} from 'next'
 import React, {useEffect, useState} from 'react'
-import serverLoadComponentCmd from 'components/empComponent/helper/serverLoadComponentCmd'
+import serverLoadComponentCmd from 'components/empComponent/serverLoadComponentCmd'
 
 function System(props: any) {
   const [view, setView]: any = useState([null])

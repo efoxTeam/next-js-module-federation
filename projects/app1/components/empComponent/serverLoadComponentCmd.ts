@@ -1,5 +1,5 @@
 import vm from 'vm'
-import {LoadComponentI} from '../types/index'
+import {LoadComponentI} from './types/index'
 
 export default function serverLoadComponentCmd({url, scope, module}: LoadComponentI) {
   return async () => {
