@@ -1,5 +1,12 @@
 import React from 'react'
-// eslint-disable-next-line react/prop-types
-const App = props => <h2>Static Host {props.title} From Remote EMP HOST [Static Host]</h2>
+const clickFn = () => alert('click me!')
+const App = ({title = 'static host'}) => {
+  return (
+    <>
+      <h2>Static Host {title} From Remote EMP HOST [Static Host]</h2>
+      <button onClick={clickFn}>另外一个基站的demo</button>
+    </>
+  )
+}
 
 export default App

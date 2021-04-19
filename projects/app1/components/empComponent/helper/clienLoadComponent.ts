@@ -3,7 +3,7 @@ export default function clienLoadComponent({url, scope, module}: LoadComponentI)
   return async () => {
     await registerHost(url)
     const factory = await (window as any)[scope].get(module)
-    console.log('factory', factory())
+    // console.log('factory', factory())
     return factory()
   }
 }

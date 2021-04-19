@@ -48,7 +48,7 @@ export default function serverLoadComponent({url, scope, module}: LoadComponentI
     script.runInContext(sandbox)
     // console.log(sandbox[scope])
     const factory = await sandbox[scope].get(module)
-    console.log('factory', factory())
+    // console.log('factory', factory())
     return factory()
   }
 }

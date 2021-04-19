@@ -1,4 +1,7 @@
 module.exports = {
+  future: {
+    webpack5: true,
+  },
   webpack: (config, {webpack}) => {
     // if (options.isServer) return config
     // const {webpack} = options
@@ -10,6 +13,9 @@ module.exports = {
     //   }),
     // )
     // console.log(webpack)
+    config.experiments = {
+      topLevelAwait: true,
+    }
     return config
   },
 }
