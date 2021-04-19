@@ -9,7 +9,7 @@ const DynamicComponent = mod.default
 function TopLvAwait() {
   return (
     <>
-      <h1>Top level await</h1>
+      <h1>Module Federation SSR</h1>
       <DynamicComponent />
     </>
   )
