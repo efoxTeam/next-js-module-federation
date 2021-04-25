@@ -6,9 +6,6 @@
   "repository": "https://github.com/efoxTeam/next-js-module-federation",
   "author": "xuhongbin <xuhongbin@yy.com>",
   "license": "MIT",
-  "dependencies": {
-    "lerna": "^3.22.1"
-  },
   "workspaces": [
     "projects/*"
   ],
@@ -16,11 +13,12 @@
     "@efox/eslint-config-react-prittier-ts": "^1.2.3"
   },
   "scripts": {
-    "dev": "lerna run --scope={app1,static-host} --parallel dev",
-    "build": "lerna run --scope={app1,static-host} --parallel build",
-    "start": "lerna run --scope={app1,static-host} --parallel start",
-    "dev:all": "lerna run --scope={app1,next-host,static-host} --parallel dev",
-    "build:all": "lerna run --scope={app1,next-host,static-host} --parallel build",
-    "start:all": "lerna run --scope={app1,next-host,static-host} --parallel start"
+    "dev": "pnpm run --filter={app1,static-host} --parallel dev",
+    "build": "pnpm run --filter={app1,static-host} --parallel build",
+    "start": "pnpm run --filter={app1,static-host} --parallel start",
+    "dev:all": "pnpm run --filter={app1,next-host,static-host} --parallel dev",
+    "build:all": "pnpm run --filter={app1,next-host,static-host} --parallel build",
+    "start:all": "pnpm run --filter={app1,next-host,static-host} --parallel start",
+    "preinstall": "npx only-allow pnpm"
   }
 }

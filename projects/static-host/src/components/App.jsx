@@ -1,6 +1,8 @@
 import React from 'react'
 const clickFn = () => alert('click me!')
-const App = ({title = 'static host'}) => {
+const App = props => {
+  // eslint-disable-next-line react/prop-types
+  const {title} = props
   return (
     <>
       <h2>Static Host {title} From Remote EMP HOST [Static Host]</h2>

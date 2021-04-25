@@ -9,7 +9,8 @@
     "start": "emp serve"
   },
   "devDependencies": {
-    "@efox/emp-cli": "^1.8.1"
+    "@efox/emp-cli": "^1.8.1",
+    "babel-loader": "^8.2.2"
   },
   "dependencies": {
     "react": "^17.0.1",

@@ -9,8 +9,11 @@ declare namespace global {
 }
 
 declare let window: Window
-
 declare module '@d2/home' {
   const App: ({title}: {title: string}) => JSX.Element
   export default App
+}
+
+declare module 'staticHost/*' {
+  export default content as any
 }

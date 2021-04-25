@@ -1,6 +1,7 @@
-import {EMPConfig} from '@efox/emp-cli/types/emp-config'
-
-const config: EMPConfig = {
+/**
+ * @type {import('@efox/emp-cli').EMPConfig}
+ */
+module.exports = {
   webpackChain(config) {
     config.devServer.port(3003)
     // config.target('node')
@@ -9,10 +10,9 @@ const config: EMPConfig = {
   moduleFederation: {
     name: 'staticHost',
     filename: 'emp.js',
-    // library: {type: 'commonjs-module'},
+    library: {type: 'commonjs-module', name: 'staticHost'},
     exposes: {
       './home': 'src/components/App',
     },
   },
 }
-export default config
