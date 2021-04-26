@@ -10,7 +10,7 @@ module.exports = {
   moduleFederation: {
     name: 'staticHost',
     filename: 'emp.js',
-    library: {type: 'commonjs-module', name: 'staticHost'},
+    // library: {type: 'commonjs-module', name: 'staticHost'},
     exposes: {
       './home': 'src/components/App',
     },

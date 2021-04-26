@@ -12,7 +12,7 @@ module.exports = {
     //     },
     //   }),
     // )
-    // console.log(webpack)
+    console.log(config.output.libraryTarget)
     config.experiments = {
       topLevelAwait: true,
     }
