@@ -10,13 +10,13 @@ const DynamicMF = dynamic(() =>
       }),
     )
     .then(d => {
-      // console.log('mf', d.default)
+      console.log('mf', d.default)
       return d
     }),
 )
 const Head = dynamic(() =>
   import('components/dynamic/Head').then((mod: any) => {
-    // console.log('local', mod.default)
+    console.log('local', mod.default)
     return mod.default
   }),
 )
