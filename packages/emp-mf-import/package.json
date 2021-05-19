@@ -1,0 +1,25 @@
+{
+  "name": "@efox/emp-mf-import",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/efoxTeam/next-js-module-federation.git",
+    "directory": "packages/emp-mf-import"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "rimraf dist && tsc --build tsconfig.json",
+    "dev": "rimraf dist && tsc --build tsconfig.json -w"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@efox/emp-tsconfig": "^1.1.3",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.2.4"
+  }
+}

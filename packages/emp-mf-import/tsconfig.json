@@ -1,0 +1,22 @@
+{
+  "extends": "@efox/emp-tsconfig",
+  "compilerOptions": {
+    "baseUrl": ".",
+    // "isolatedModules": true,
+    // "declaration": true,
+    "outDir": "dist",
+    "sourceMap": false,
+    "target": "ESNext",
+    "module": "commonjs",
+    // "importHelpers": true,
+    "removeComments": true,
+    "esModuleInterop": true,
+  },
+  "exclude": [
+    "node_modules"
+  ],
+  "include": [
+    "src/index.ts",
+    "src/types.d.ts"
+  ]
+}
