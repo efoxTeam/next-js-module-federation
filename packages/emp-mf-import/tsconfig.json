@@ -3,7 +3,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     // "isolatedModules": true,
-    // "declaration": true,
+    "declaration": true,
     "outDir": "dist",
     "sourceMap": false,
     "target": "ESNext",
