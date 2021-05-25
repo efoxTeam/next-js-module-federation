@@ -1,12 +1,10 @@
-export default function clienLoadComponent({url, scope, module}: LoadComponentI) {
-  return async () => {
-    await registerHost(url)
-    await __webpack_init_sharing__('default')
-    const container: any = window[scope]
-    await container.init(__webpack_share_scopes__.default)
-    const factory = await container.get(module)
-    return factory()
-  }
+export default async function clienLoadComponent({url, scope, module}: LoadComponentI) {
+  await registerHost(url)
+  await __webpack_init_sharing__('default')
+  const container: any = window[scope]
+  await container.init(__webpack_share_scopes__.default)
+  const factory = await container.get(module)
+  return factory()
 }
 const remoteHosts: any = {}
 const registerHost = (url: string) => {

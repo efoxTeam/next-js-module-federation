@@ -14,5 +14,15 @@ module.exports = {
     exposes: {
       './home': 'src/components/App',
     },
+    // shared: {
+    //   react: {
+    //     eager: true,
+    //     singleton: true,
+    //   },
+    //   'react-dom': {
+    //     eager: true,
+    //     singleton: true,
+    //   },
+    // },
   },
 }
