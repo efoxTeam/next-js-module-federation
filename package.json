@@ -4,7 +4,7 @@
   "main": "index.js",
   "private": "true",
   "repository": "https://github.com/efoxTeam/next-js-module-federation",
-  "author": "xuhongbin <xuhongbin@yy.com>",
+  "author": "xuhongbin",
   "license": "MIT",
   "workspaces": [
     "projects/*"
