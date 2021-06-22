@@ -1,28 +1,31 @@
-const reunited = require('./reunited')
-const path = require('path')
-module.exports = {
-  future: {
-    webpack5: true,
+// next.config.js
+const {withFederatedSidecar} = require('@module-federation/nextjs-mf')
+
+module.exports = withFederatedSidecar({
+  name: 'nextHost',
+  filename: 'static/chunks/emp.js',
+  exposes: {
+    './home': './components/home',
   },
-  webpack: (config, options) => {
-    // if (options.isServer) return config
-    // config.output.publicPath = 'auto'
-    const {webpack} = options
-    config.plugins.push(
-      new webpack.container.ModuleFederationPlugin({
-        name: 'nextHost',
-        library: {type: config.output.libraryTarget, name: 'nextHost'},
-        filename: 'static/runtime/emp.js',
-        remotes: {
-          // staticHost: 'staticHost@http://localhost:3003/emp.js'
-          staticHost: reunited(path.join(__dirname, './helper/statichost.js'), 'staticHost'),
-        },
-        exposes: {
-          './home': './components/home',
-        },
-      }),
-    )
-    // console.log(JSON.stringify(config, null, 2))
-    return config
+  shared: {
+    react: {
+      // Notice shared are NOT eager here.
+      requiredVersion: false,
+      singleton: true,
+    },
+    'next/dynamic': {
+      requiredVersion: false,
+      singleton: true,
+    },
+    'next/link': {
+      requiredVersion: false,
+      singleton: true,
+    },
   },
-}
+})({
+  /*  webpack(config, options) {
+    if (!options.isServer) {
+      config.output.publicPath = 'http://localhost:3002/_next/'
+    }
+  }, */
+})

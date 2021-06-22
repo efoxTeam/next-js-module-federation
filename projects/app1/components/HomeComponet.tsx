@@ -6,7 +6,7 @@ const DynamicMF = dynamic(() =>
     url: 'http://localhost:3003/emp.js',
     scope: 'staticHost',
     module: './home',
-  }),
+  }).then(m => m.default),
 )
 const Head = dynamic(import('components/dynamic/Head'))
 const HomeComponet = () => {

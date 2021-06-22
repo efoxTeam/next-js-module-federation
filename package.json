@@ -6,9 +6,6 @@
   "repository": "https://github.com/efoxTeam/next-js-module-federation",
   "author": "xuhongbin",
   "license": "MIT",
-  "workspaces": [
-    "projects/*"
-  ],
   "devDependencies": {
     "@efox/eslint-config-react-prittier-ts": "^1.2.3"
   },
