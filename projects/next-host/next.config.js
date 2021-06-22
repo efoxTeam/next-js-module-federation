@@ -23,9 +23,10 @@ module.exports = withFederatedSidecar({
     },
   },
 })({
-  /*  webpack(config, options) {
+  webpack(config, options) {
     if (!options.isServer) {
       config.output.publicPath = 'http://localhost:3002/_next/'
     }
-  }, */
+    return config
+  },
 })
