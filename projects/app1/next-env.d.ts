@@ -1,16 +1,6 @@
 /// <reference types="next" />
 /// <reference types="next/types/global" />
+/// <reference types="next/image-types/global" />
 
-// declare module 'demo2/*'
-// declare module '@d1/*'
-
-declare namespace global {
-  export default NodeJS.Global & typeof globalThis || any
-}
-
-declare let window: Window
-
-declare module '@sh/home' {
-  const App: ({title}: {title: string}) => JSX.Element
-  export default App
-}
+// NOTE: This file should not be edited
+// see https://nextjs.org/docs/basic-features/typescript for more information.

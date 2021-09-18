@@ -1,12 +1,13 @@
 import dynamic from 'next/dynamic'
-import mfImport from '@efox/emp-mf-import'
+import {importMF} from 'components/empComponent/helper/loadComponent'
+// import mfImport from '@efox/emp-mf-import'
 
 const DynamicMF = dynamic(() =>
-  mfImport({
+  importMF({
     url: 'http://localhost:3003/emp.js',
     scope: 'staticHost',
     module: './home',
-  }).then(m => m.default),
+  }),
 )
 const Head = dynamic(import('components/dynamic/Head'))
 const HomeComponet = () => {

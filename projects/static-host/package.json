@@ -4,12 +4,12 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "emp dev --open=false",
+    "dev": "emp dev",
     "build": "emp build",
     "start": "emp serve"
   },
   "devDependencies": {
-    "@efox/emp-cli": "^1.8.21",
+    "@efox/emp-cli": "^1.9.6",
     "babel-loader": "^8.2.2"
   },
   "dependencies": {

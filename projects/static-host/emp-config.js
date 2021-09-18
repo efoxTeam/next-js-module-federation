@@ -5,7 +5,7 @@ module.exports = {
   webpackChain(config) {
     config.devServer.port(3003)
     // config.target('node')
-    config.output.publicPath('http://localhost:3003/')
+    // config.output.publicPath('http://localhost:3003/')
   },
   moduleFederation: {
     name: 'staticHost',
@@ -14,15 +14,15 @@ module.exports = {
     exposes: {
       './home': 'src/components/App',
     },
-    // shared: {
-    //   react: {
-    //     eager: true,
-    //     singleton: true,
-    //   },
-    //   'react-dom': {
-    //     eager: true,
-    //     singleton: true,
-    //   },
-    // },
+    /* shared: {
+      react: {
+        eager: true,
+        singleton: true,
+      },
+      'react-dom': {
+        eager: true,
+        singleton: true,
+      },
+    }, */
   },
 }
