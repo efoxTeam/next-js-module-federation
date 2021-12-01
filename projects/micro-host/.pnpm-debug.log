@@ -1,0 +1,236 @@
+{
+  "0 debug pnpm:scope": {
+    "selected": 8,
+    "total": 8,
+    "workspacePrefix": "D:\\Develop\\next-js-module-federation"
+  },
+  "1 debug pnpm:package-manifest": {
+    "initial": {
+      "name": "next-js-module-federation",
+      "version": "1.0.0",
+      "main": "index.js",
+      "private": "true",
+      "repository": "https://github.com/efoxTeam/next-js-module-federation",
+      "author": "xuhongbin",
+      "license": "MIT",
+      "devDependencies": {
+        "@efox/eslint-config-react-prittier-ts": "^1.2.3"
+      },
+      "scripts": {
+        "dev": "pnpm run --filter={app1,static-host} --parallel dev",
+        "build": "pnpm run --filter={app1,static-host} --parallel build",
+        "start": "pnpm run --filter={app1,static-host} --parallel start",
+        "dev:all": "pnpm run --filter={app1,next-host,static-host} --parallel dev",
+        "build:all": "pnpm run --filter={app1,next-host,static-host} --parallel build",
+        "start:all": "pnpm run --filter={app1,next-host,static-host} --parallel start",
+        "preinstall": "npx only-allow pnpm"
+      }
+    },
+    "prefix": "D:\\Develop\\next-js-module-federation"
+  },
+  "2 debug pnpm:package-manifest": {
+    "initial": {
+      "name": "@efox/emp-mf-import",
+      "version": "1.0.0",
+      "description": "",
+      "main": "dist/index.js",
+      "types": "dist/index.d.ts",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/efoxTeam/next-js-module-federation.git",
+        "directory": "packages/emp-mf-import"
+      },
+      "publishConfig": {
+        "access": "public"
+      },
+      "scripts": {
+        "build": "rimraf dist && tsc --build tsconfig.json",
+        "dev": "rimraf dist && tsc --build tsconfig.json -w"
+      },
+      "author": "",
+      "license": "ISC",
+      "devDependencies": {
+        "@efox/emp-tsconfig": "^1.1.3",
+        "rimraf": "^3.0.2",
+        "typescript": "^4.2.4"
+      }
+    },
+    "prefix": "D:\\Develop\\next-js-module-federation\\packages\\emp-mf-import"
+  },
+  "3 debug pnpm:package-manifest": {
+    "initial": {
+      "name": "mf-app",
+      "version": "1.0.0",
+      "description": "",
+      "main": "index.js",
+      "scripts": {
+        "dev": "next -p 3001",
+        "build": "next build",
+        "start": "next start -p 3001",
+        "next": "next"
+      },
+      "author": "",
+      "license": "ISC",
+      "dependencies": {
+        "next": "^11.0.0",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2"
+      }
+    },
+    "prefix": "D:\\Develop\\next-js-module-federation\\projects\\mf-app"
+  },
+  "4 debug pnpm:package-manifest": {
+    "initial": {
+      "name": "micro-host",
+      "version": "1.0.0",
+      "description": "",
+      "main": "index.js",
+      "scripts": {
+        "dev": "emp dev -cl false",
+        "build": "emp build",
+        "start": "emp serve",
+        "stat": "emp build --analyze"
+      },
+      "author": "",
+      "license": "ISC",
+      "devDependencies": {
+        "@efox/emp": "workspace:^*"
+      },
+      "dependencies": {
+        "axios": "^0.21.4",
+        "mobx": "^6.3.7",
+        "mobx-react": "^7.2.1",
+        "mobx-react-lite": "^3.2.2",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2",
+        "react-router-dom": "5"
+      }
+    },
+    "prefix": "D:\\Develop\\next-js-module-federation\\projects\\micro-host"
+  },
+  "5 debug pnpm:package-manifest": {
+    "initial": {
+      "name": "next-externals",
+      "version": "1.0.0",
+      "description": "",
+      "main": "index.js",
+      "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint"
+      },
+      "author": "",
+      "license": "ISC",
+      "dependencies": {
+        "next": "^12.0.4",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2"
+      }
+    },
+    "prefix": "D:\\Develop\\next-js-module-federation\\projects\\next-externals"
+  },
+  "6 debug pnpm:package-manifest": {
+    "initial": {
+      "name": "next-host",
+      "version": "1.0.0",
+      "main": "index.js",
+      "license": "MIT",
+      "devDependencies": {
+        "@efox/emp-tsconfig": "^1.1.3",
+        "@types/react": "^17.0.0",
+        "eslint-config-next": "^11.0.0",
+        "typescript": "^4.1.2",
+        "webpack": "^5.11.1"
+      },
+      "dependencies": {
+        "@module-federation/nextjs-mf": "^2.0.0",
+        "next": "^11.0.0",
+        "react": "^17.0.1",
+        "react-dom": "^17.0.1"
+      },
+      "scripts": {
+        "dev": "next -p 3002",
+        "build": "next build",
+        "start": "next start -p 3002"
+      }
+    },
+    "prefix": "D:\\Develop\\next-js-module-federation\\projects\\next-host"
+  },
+  "7 debug pnpm:package-manifest": {
+    "initial": {
+      "name": "static-host",
+      "version": "1.0.0",
+      "main": "index.js",
+      "license": "MIT",
+      "scripts": {
+        "dev": "emp dev",
+        "build": "emp build",
+        "start": "emp serve"
+      },
+      "devDependencies": {
+        "@efox/emp-cli": "^1.9.6",
+        "babel-loader": "^8.2.2"
+      },
+      "dependencies": {
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2"
+      }
+    },
+    "prefix": "D:\\Develop\\next-js-module-federation\\projects\\static-host"
+  },
+  "8 debug pnpm:package-manifest": {
+    "initial": {
+      "name": "app1",
+      "version": "1.0.0",
+      "main": "index.js",
+      "license": "MIT",
+      "devDependencies": {
+        "@efox/emp-tsconfig": "^1.1.3",
+        "@types/react": "^17.0.0",
+        "typescript": "^4.2.4"
+      },
+      "dependencies": {
+        "@efox/emp-mf-import": "workspace:^1.0.0",
+        "next": "^11.1.2",
+        "react": "^17.0.2",
+        "react-async": "^10.0.1",
+        "react-dom": "^17.0.2"
+      },
+      "scripts": {
+        "dev": "next -p 3001",
+        "build": "next build",
+        "start": "next start -p 3001",
+        "next": "next"
+      }
+    },
+    "prefix": "D:\\Develop\\next-js-module-federation\\projects\\app1"
+  },
+  "9 debug pnpm:context": {
+    "currentLockfileExists": true,
+    "storeDir": "D:\\.pnpm-store\\v3",
+    "virtualStoreDir": "D:\\Develop\\next-js-module-federation\\node_modules\\.pnpm"
+  },
+  "10 debug pnpm:stage": {
+    "prefix": "D:\\Develop\\next-js-module-federation",
+    "stage": "resolution_started"
+  },
+  "11 debug pnpm:_dependency_resolved": {
+    "resolution": "link:../../packages/emp-mf-import",
+    "wanted": {
+      "dependentId": "projects/app1",
+      "name": "@efox/emp-mf-import",
+      "rawSpec": "workspace:^1.0.0"
+    }
+  },
+  "12 error pnpm": {
+    "code": "ERR_PNPM_NO_MATCHING_VERSION_INSIDE_WORKSPACE",
+    "pkgsStack": [],
+    "err": {
+      "name": "pnpm",
+      "message": "In : No matching version found for @efox/emp@^* inside the workspace",
+      "code": "ERR_PNPM_NO_MATCHING_VERSION_INSIDE_WORKSPACE",
+      "stack": "pnpm: In : No matching version found for @efox/emp@^* inside the workspace\n    at tryResolveFromWorkspace (C:\\Users\\xuhongbin\\AppData\\Roaming\\npm\\node_modules\\pnpm\\dist\\pnpm.cjs:85268:15)\n    at resolveNpm (C:\\Users\\xuhongbin\\AppData\\Roaming\\npm\\node_modules\\pnpm\\dist\\pnpm.cjs:85159:39)\n    at Object.resolve (C:\\Users\\xuhongbin\\AppData\\Roaming\\npm\\node_modules\\pnpm\\dist\\pnpm.cjs:85391:40)\n    at ctx.requestsQueue.add.priority (C:\\Users\\xuhongbin\\AppData\\Roaming\\npm\\node_modules\\pnpm\\dist\\pnpm.cjs:71356:75)\n    at run (C:\\Users\\xuhongbin\\AppData\\Roaming\\npm\\node_modules\\pnpm\\dist\\pnpm.cjs:71095:90)\n    at PQueue._tryToStartAnother (C:\\Users\\xuhongbin\\AppData\\Roaming\\npm\\node_modules\\pnpm\\dist\\pnpm.cjs:71049:13)\n    at C:\\Users\\xuhongbin\\AppData\\Roaming\\npm\\node_modules\\pnpm\\dist\\pnpm.cjs:71108:16\n    at new Promise (<anonymous>)\n    at PQueue.add (C:\\Users\\xuhongbin\\AppData\\Roaming\\npm\\node_modules\\pnpm\\dist\\pnpm.cjs:71090:16)\n    at resolveAndFetch (C:\\Users\\xuhongbin\\AppData\\Roaming\\npm\\node_modules\\pnpm\\dist\\pnpm.cjs:71356:55)"
+    }
+  }
+}
