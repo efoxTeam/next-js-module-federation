@@ -1,14 +1,13 @@
 import Script from 'next/script'
 import type {AppProps} from 'next/app'
 import load from 'helpers/cdn'
-
+const cdn = load(process.env.NEXT_PUBLIC_ENV)
 function MyApp({Component, pageProps}: AppProps) {
   return (
     <>
-      <Script src={load(process.env.NEXT_PUBLIC_ENV)['react']} strategy="beforeInteractive" />
-      <Script src={load(process.env.NEXT_PUBLIC_ENV)['react-dom']} strategy="beforeInteractive" />
-      <Script src={load(process.env.NEXT_PUBLIC_ENV)['mobx']} strategy="beforeInteractive" />
-      <Script src={load(process.env.NEXT_PUBLIC_ENV)['mobx-react-lite']} strategy="beforeInteractive" />
+      {Object.keys(cdn).map((k: string) => (
+        <Script key={k} src={cdn[k]} strategy="beforeInteractive" />
+      ))}
       <Component {...pageProps} />
     </>
   )

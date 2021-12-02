@@ -73,12 +73,14 @@ importers:
   projects/next-externals:
     specifiers:
       mobx: ^6.3.7
+      mobx-react: ^7.2.1
       mobx-react-lite: ^3.2.2
       next: ^12.0.4
       react: ^17.0.2
       react-dom: ^17.0.2
     dependencies:
       mobx: 6.3.8
+      mobx-react: 7.2.1_02876c366ce89e988b8bf5dff3cf0e00
       mobx-react-lite: 3.2.2_02876c366ce89e988b8bf5dff3cf0e00
       next: 12.0.4_react-dom@17.0.2+react@17.0.2
       react: 17.0.2

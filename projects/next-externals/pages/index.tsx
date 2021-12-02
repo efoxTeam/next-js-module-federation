@@ -4,7 +4,12 @@ const StoreComp = dynamic(() => import('components/StoreComp'))
 function HomePage() {
   return (
     <>
-      <EMPComponent url="http://localhost:8001/emp.js" scope={'microHost'} module="./App" isIndexTop={true} />
+      <EMPComponent
+        url="https://unpkg.bdgamelive.com/@gfe/bdgamelive_home_base@1.0.0-test.11/dist/emp.js"
+        scope={'bdgamelive_home_base'}
+        module="./Navigator"
+        isIndexTop={true}
+      />
       <StoreComp />
       <h1>Welcome to Next.js!</h1>
     </>
