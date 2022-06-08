@@ -4,12 +4,6 @@ const DynamicComponent = await importMF({
   scope: 'staticHost',
   module: './home',
 })
-/* const DynamicComponent = await importMF({
-  url: 'https://cweb-test.yy.com/bdgamelive/bdgamelive_share_emp.js',
-  scope: 'bdgamelive_share_emp_1_0',
-  module: './mobile/revenueList/index',
-}) */
-// const DynamicComponent = mod.default
 
 function TopLvAwait() {
   return (
